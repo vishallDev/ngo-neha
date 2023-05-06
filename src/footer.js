@@ -36,13 +36,13 @@ function Footer() {
                   Our Programs
                 </h6>
                 <p>
-                  <a href="#" className="text-reset">Education</a>
+                  <a href="/" className="text-reset">Education</a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset">Health</a>
+                  <a href="/" className="text-reset">Health</a>
                 </p>
                 <p>
-                  <a href="#" className="text-reset">Livelihoods</a>
+                  <a href="/" className="text-reset">Livelihoods</a>
                 </p>
               </div>
   
