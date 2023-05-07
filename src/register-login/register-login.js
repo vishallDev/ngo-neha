@@ -12,24 +12,23 @@ function RegisterLogin() {
     <div className="container mt-5">
       <ul className="nav nav-tabs">
         <li className="nav-item">
-          <a
+          <button
             className={`nav-link ${activeTab === 'login' ? 'active' : ''}`}
             data-tab="login"
             onClick={handleTabChange}
-            href="#"
           >
             Login
-          </a>
+          </button>
         </li>
         <li className="nav-item">
-          <a
+          <button
             className={`nav-link ${activeTab === 'register' ? 'active' : ''}`}
             data-tab="register"
             onClick={handleTabChange}
             href="#"
           >
             Register
-          </a>
+          </button>
         </li>
       </ul>
 
