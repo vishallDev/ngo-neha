@@ -1,6 +1,29 @@
-function Hero() {
-    return (
+import React, { useState, useEffect } from 'react';
 
+function Hero() {
+    const [users, setUsers] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:3000/api/users')
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.json();
+          })
+          .then(data => {
+            console.log('Received data:', data);
+            setUsers(data);
+          })
+          .catch(error => {
+            console.error('Error fetching data:', error);
+          });
+      }, []);
+      
+    return (
+        <>
+        {users.map(user => (
+        <li >{user.user_name}</li>
+      ))}
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -39,6 +62,7 @@ function Hero() {
                 <span class="sr-only">Next</span>
             </a>
         </div>
+        </>
     );
 }
 

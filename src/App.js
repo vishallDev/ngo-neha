@@ -6,7 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 // import Popper from 'popper.js';
 import  Header  from './header/header';
 import Hero from './hero/hero'
-import Footer from './footer'
+import Footer from './footer/footer'
 function App() {
   return (
     <>
