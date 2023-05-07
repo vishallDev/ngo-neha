@@ -4,6 +4,7 @@ function RegisterLogin() {
   const [activeTab, setActiveTab] = useState('login');
 
   const handleTabChange = (event) => {
+    event.preventDefault();
     setActiveTab(event.target.dataset.tab);
   };
 
@@ -15,6 +16,7 @@ function RegisterLogin() {
             className={`nav-link ${activeTab === 'login' ? 'active' : ''}`}
             data-tab="login"
             onClick={handleTabChange}
+            href="#"
           >
             Login
           </a>
@@ -24,6 +26,7 @@ function RegisterLogin() {
             className={`nav-link ${activeTab === 'register' ? 'active' : ''}`}
             data-tab="register"
             onClick={handleTabChange}
+            href="#"
           >
             Register
           </a>
