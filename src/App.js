@@ -7,11 +7,13 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import  Header  from './header/header';
 import Hero from './hero/hero'
 import Footer from './footer/footer'
+import RegisterLogin from './register-login/register-login';
 function App() {
   return (
     <>
     <Header/>
     <Hero/>
+    <RegisterLogin/>
     <Footer/>
     </>
   );
