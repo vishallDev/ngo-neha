@@ -1,0 +1,102 @@
+@import "../../styles/variables.scss";
+.HeroSlider{
+    padding: 28px 0px;
+    overflow: hidden;
+    padding-top: 0;
+    .slick-slide {
+        transform: scale(.90);
+        transition: all .5s ease;
+        &.slick-active {
+            transform: scale(1);
+        }
+    }
+    .slick-arrow  {
+        left: 0;
+        z-index: 999;
+        border-radius: 0;
+        background-color: white !important;
+        padding: 40px 20px;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease;
+        padding-left: 12px;
+        padding-right: 20px;
+        border-radius: 0px 20px 20px 0px;
+        &:hover {
+            background-color: #E6FFFD;
+        }
+        &::before {
+            content: '➯';
+            border-radius: 0;
+            background-color: transparent;
+            padding: 0;
+            margin: 0;
+            color: black;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &.slick-prev {
+            left: 0;
+            &::before {
+                top: 4px;
+                position: relative;
+                transform: rotate(180deg);
+            }
+        }
+        &.slick-next {
+            left: unset;
+            right: 0;
+            padding-left: 20px;
+            padding-right: 12px;
+            border-radius: 20px 0px 0px 20px;
+        }
+    }
+        .slick-slide {
+            margin: 0 14px !important;
+        }
+        .slick-track {
+            display: flex;
+        }
+        .slick-list {
+            margin: 0 -14px !important;
+        }
+    .singe_slide {
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content_wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.0));
+            padding: 40px 20px;
+            h1 {
+                font-family: $inter;
+                font-weight: 900;
+                font-size: 54px;
+                letter-spacing: 0.80px;
+                max-width: 60%;
+                color: white;
+            }
+            p {
+                margin: 0;
+                font-size: 18px;
+                letter-spacing: 1px;
+                font-weight: 400;
+                color: rgba(255, 255, 255, 1);
+                font-family: $yanone;
+
+            }
+        }
+    }
+}
