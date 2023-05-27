@@ -3,6 +3,32 @@
     padding: 28px 0px;
     overflow: hidden;
     padding-top: 0;
+    background-image: radial-gradient(circle at 49% 34%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 89% 42%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 13% 99%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 99% 72%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 28% 97%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 3%,transparent 3%, transparent 100%),radial-gradient(circle at 71% 35%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 54% 20%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 74% 26%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 61% 72%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 74% 73%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 49% 91%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 17% 44%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 21% 42%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 52% 76%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 7%,transparent 7%, transparent 100%),radial-gradient(circle at 64% 77%, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0.02) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 79% 83%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 65%, rgba(0,0,0,0.03) 0%, rgba(0,0,0,0.03) 5%,transparent 5%, transparent 100%),radial-gradient(circle at 40% 22%, rgba(0,0,0,0.01) 0%, rgba(0,0,0,0.01) 5%,transparent 5%, transparent 100%),linear-gradient(45deg, hsla(29,0%,100%,1),hsla(44,0%,100%,1));
+    .slick-dots {
+        position: relative;
+        max-width: max-content;
+        margin: 0 auto;
+        border-radius: 12px;
+        background-color: rgba(0, 0, 0, 0.068);
+        margin-bottom: 20px;
+        li {
+            top: -2px;
+            button {
+                &::before {
+                    color: black;
+                }
+            }
+            &.slick-active {
+                
+                button {
+                    &::before {
+                        font-size: 16px;
+                        color: #B799FF;
+                    }
+                }
+            }
+        }
+    }
     .slick-slide {
         transform: scale(.90);
         transition: all .5s ease;
@@ -24,7 +50,7 @@
         padding-right: 20px;
         border-radius: 0px 20px 20px 0px;
         &:hover {
-            background-color: #E6FFFD;
+            background-color: #E6FFFD !important;
         }
         &::before {
             content: '➯';
@@ -39,19 +65,26 @@
             align-items: center;
         }
         &.slick-prev {
-            left: 0;
             &::before {
                 top: 4px;
                 position: relative;
                 transform: rotate(180deg);
             }
+            left: -8px;
+            padding-left: 20px;
+            &:hover {
+                left: 0px;
+            }
         }
         &.slick-next {
             left: unset;
-            right: 0;
+            right: -8px;
             padding-left: 20px;
-            padding-right: 12px;
+            padding-right: 20px;
             border-radius: 20px 0px 0px 20px;
+            &:hover {
+                right: 0px;
+            }
         }
     }
         .slick-slide {
@@ -91,7 +124,7 @@
             }
             p {
                 margin: 0;
-                font-size: 18px;
+                font-size: 28px;
                 letter-spacing: 1px;
                 font-weight: 400;
                 color: rgba(255, 255, 255, 1);
