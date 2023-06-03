@@ -14,7 +14,7 @@ function Header() {
 							<li><a href="">About</a></li>
 							<li><a href="">Be A Volunteer</a></li>
 							<li><a href="">Events</a></li>
-							<li ><a href="">Career</a></li>
+							<li ><a href="/career">Career</a></li>
 							<br/>
 							<li class="btn"><a href="/register-login">Login</a></li>
 							<li class="btn"><a href="/register-login">Signup</a></li>

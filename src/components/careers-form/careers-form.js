@@ -15,21 +15,16 @@ function CareersForm() {
                     <div id="accordion">
                       {Array.from({ length: 10 }, (_, index) => (
                         <div className="card" key={`jobPosition${index}`}>
-                          <div className="card-header" id={`heading${index}`}>
-                            <h5 className="mb-0">
-                              <button className="btn btn-link" data-toggle="collapse" data-target={`#collapse${index}`} aria-expanded="true" aria-controls={`collapse${index}`}>
+                          <div className="card-header" id={`heading${index}`} data-toggle="collapse" data-target={`#collapse${index}`} aria-expanded="true" aria-controls={`collapse${index}`}>
+                            <h5 className="mb-0" >
                                 Job Position {index + 1}
-                              </button>
-                              <button className="btn btn-link">
-                                Apply
-                              </button>
                             </h5>
                           </div>
                           <div id={`collapse${index}`} className={`collapse ${index === 0 ? 'show' : ''}`} aria-labelledby={`heading${index}`} data-parent="#accordion">
                             <div className="card-body">
                               <h3>Job Description</h3>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod ultrices nisl, ac sodales diam faucibus vitae.</p>
-                              <button className="btn btn-primary">Apply Now</button>
+                              <button className="btn_nav">Apply Now</button>
                             </div>
                           </div>
                         </div>
