@@ -1,0 +1,65 @@
+.dashboard-container {
+    display: flex;
+    height: 100%;
+  }
+  
+  .left-menu {
+    width: 200px;
+    background-color: #6c757d;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+  }
+  
+  .menu-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #6c757d;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    background-color: #6c757d;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+    
